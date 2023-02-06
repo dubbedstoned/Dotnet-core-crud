@@ -1,0 +1,44 @@
+﻿
+
+
+@model WebApplication1.Models.Department
+
+@{
+    ViewData["Title"] = "CreateEmployee";
+}
+
+<h1>CreateDepartment</h1>
+
+<div class=" container">
+    <div class=" row">
+        <div class=" col-6 offset-3">
+            <div class="card">
+                <div class="card-header">
+                    <h1 class="text-info text-center">
+                        Add Department
+                    </h1>
+                </div>
+                <div class="card-body">
+                    <div asp-validation-summary="All"></div>
+                    <form method="post" asp-action="CreateDepartment" asp-controller="Department">
+                        <div class="form-group">
+                            <label class="label" asp-for="DeptName">Name</label>
+                            <input type="text" class=" form-control" placeholder="Enter Name" asp-for="DeptName" />
+
+                        </div>
+                         
+                        <div>
+                            <input type="submit" class="btn btn-sm btn-primary float-right"/>
+                        </div>
+
+                    </form>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>

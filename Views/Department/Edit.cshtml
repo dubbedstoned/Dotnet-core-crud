@@ -1,0 +1,41 @@
+﻿
+
+
+@model WebApplication1.Models.Department
+
+
+
+<h1>UpdateDepartment</h1>
+
+<div class=" container">
+    <div class=" row">
+        <div class=" col-6 offset-3">
+            <div class="card">
+                <div class="card-header">
+                    <h1 class="text-info text-center">
+                        Update Department
+                    </h1>
+                </div>
+                <div class="card-body">
+                    <div class="text-danger" asp-validation-summary="All"></div>
+                    <form method="post" asp-action="Edit" asp-controller="Department">
+                        <div class="form-group">
+                            <label class="label" asp-for="DeptName">Name</label>
+                            <input type="text" class=" form-control" placeholder="Enter Name" asp-for="DeptName" />
+                        </div>
+                         
+                        <div>
+                            <input type="submit" class="btn btn-sm btn-primary float-right" value="Update"/>
+                        </div>
+
+                    </form>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
